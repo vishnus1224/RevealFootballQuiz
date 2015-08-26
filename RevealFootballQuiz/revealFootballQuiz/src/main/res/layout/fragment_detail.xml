@@ -1,0 +1,264 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/mask_edge" >
+
+        <ImageView
+            android:id="@+id/ivPicture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <ImageView
+                    android:id="@+id/mask1"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_1" />
+
+                <ImageView
+                    android:id="@+id/mask2"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_2" />
+
+                <ImageView
+                    android:id="@+id/mask3"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <ImageView
+                    android:id="@+id/mask4"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_4" />
+
+                <ImageView
+                    android:id="@+id/mask5"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_5" />
+
+                <ImageView
+                    android:id="@+id/mask6"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="3" >
+
+                <ImageView
+                    android:id="@+id/mask7"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_7" />
+
+                <ImageView
+                    android:id="@+id/mask8"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_8" />
+
+                <ImageView
+                    android:id="@+id/mask9"
+                    style="@style/maskStyle"
+                    android:src="@drawable/mask_9" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/answerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/frame"
+        android:layout_alignRight="@id/frame"
+        android:layout_below="@id/frame"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/bShowPiece"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/userRatingDetail"
+            android:background="@drawable/remove_button_drawable"
+            android:textColor="@android:color/black" />
+
+        <RatingBar
+            android:id="@+id/userRatingDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:isIndicator="true"
+            android:numStars="3"
+            android:progressDrawable="@drawable/rating_bar_dirt" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/answerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answerLayout"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:id="@+id/userAnswerStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" />
+
+        <LinearLayout
+            android:id="@+id/userAnswerEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvUserScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/answerContainer"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/optionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp" >
+
+        <LinearLayout
+            android:id="@+id/optionsStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/buttonOption1"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption2"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption3"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption4"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption5"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption6"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption7"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption8"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption9"
+                style="@style/answerButtonStyle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/optionsEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/optionsStart"
+            android:layout_marginTop="1dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/buttonOption10"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption11"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption12"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption13"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption14"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption15"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption16"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption17"
+                style="@style/answerButtonStyle" />
+
+            <Button
+                android:id="@+id/buttonOption18"
+                style="@style/answerButtonStyle" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+</RelativeLayout>

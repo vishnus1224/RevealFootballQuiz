@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:id="@+id/adapterBlock" >
+
+    <TextView
+        android:id="@+id/tvBlockPlayerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pbBlockProgress"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBlockPlayersUnlocked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBlockPlayerCount"
+        android:layout_marginLeft="15dp"
+        android:text="36/75"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBlockScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvBlockPlayerCount"
+        android:layout_alignRight="@+id/pbBlockProgress"
+        android:text="Score:"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvBlockTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBlockPlayersUnlocked"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Level 1"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bBlockPlay"
+        style="@style/blockStyle"
+        android:layout_below="@id/tvBlockTitle"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/block_start_button_drawable" />
+
+    <TextView
+        android:id="@+id/tvBlockStartProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bBlockPlay"
+        android:layout_alignLeft="@+id/pbBlockProgress"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvBlockFinalProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvBlockStartProgress"
+        android:layout_alignRight="@+id/pbBlockProgress"
+        android:text="100%"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/pbBlockProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBlockStartProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:max="100"
+        android:progress="50" />
+    
+    
+    <TextView android:id="@+id/tvBlockCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/tvBlockStartProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/pbBlockProgress"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>

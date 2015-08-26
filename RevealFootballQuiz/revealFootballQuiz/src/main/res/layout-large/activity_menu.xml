@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_1" >
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-8029602280923056/3967760720" />
+    
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adViewMenu"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/reveal_logo" />
+
+
+    <View
+        android:id="@+id/viewMiddleLine"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <Button
+        android:id="@+id/bPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bHighscores"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="80dp"
+        android:layout_toLeftOf="@id/viewMiddleLine"
+        android:background="@drawable/play_button" />
+
+    <Button
+        android:id="@+id/bHighscores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bSettings"
+        android:layout_alignLeft="@id/bPlay"
+        android:layout_alignRight="@id/bPlay"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/highscore_button_drawable" />
+
+    <Button
+        android:id="@+id/bSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bPlay"
+        android:layout_alignRight="@id/bPlay"
+        android:layout_alignTop="@+id/ivMainFootball"
+        android:background="@drawable/settings_button" />
+
+    <Button
+        android:id="@+id/bQuit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bSettings"
+        android:layout_alignRight="@id/bPlay"
+        android:layout_below="@id/bSettings"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/quit_button" />
+    
+    <ImageView
+        android:id="@+id/ivMainFootball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/main_football"/>
+
+
+</RelativeLayout>
